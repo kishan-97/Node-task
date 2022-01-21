@@ -17,6 +17,9 @@ app.use(express.urlencoded({extended:false}));
 
 app.use(userRoutes);
 app.use(postRoutes);
+app.use('/',(req,res)=>{
+    res.json('Please use /signup to Login \n /login to Login \n /posts to view get Posts \n /addPost to add Posts');
+})
 
 app.listen(PORT,()=>{
     console.log(`Server running at PORT ${PORT}`);
