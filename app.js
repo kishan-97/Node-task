@@ -18,7 +18,7 @@ app.use(express.urlencoded({extended:false}));
 app.use(userRoutes);
 app.use(postRoutes);
 app.use('/',(req,res)=>{
-    res.json('Please use /signup to Signup, /login to Login, /posts to view get Posts, /addPost to add Posts');
+    res.json('Use /signup to Signup, /login to Login, /posts to view get Posts, /addPost to add Posts');
 })
 
 app.listen(PORT,()=>{
